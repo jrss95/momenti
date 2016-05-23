@@ -1,0 +1,65 @@
+<?php
+$this->title = 'Home | Momenti';
+
+$source = [
+'twitter' => 'https://twitter.com/',
+'instagram' => 'https://instagram.com/',
+];
+?>
+<h1>Home</h1>
+<div id="feed">
+    <?php foreach($posts as $post): ?>
+    <div class="post <?= $post->source ?>">
+        <div class="post-info header">
+            <i class="fa fa-<?= $post->source ?>"></i>
+            <a href="<?= $source[$post->source] ?><?= $post->author ?>"><?= $post->author ?></a>
+            <span class="pull-right text-right"><?= date('M j, Y at g:ia', strtotime($post->created_source)) ?></span>
+        </div>
+        <div class="post-info media">
+            <?php if($post->hasMedia()) {
+                $media = $post->getMedia();
+                ?>
+                <?php
+                $countImages = count($media->imgs);
+                if(count($countImages)) {
+                    ?>
+                    <div class="row">
+                        <?php foreach($media->imgs as $image): ?>
+                        <div col-sm-<?= (12/$countImages) ?>>
+                            <img src="<?= $image->url ?>">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php
+            }
+            ?>
+            <?php foreach($media->videos as $video): ?>
+            <div class="post-info">
+                <a href="<?= $video['url'] ?>" target="_blank">Watch Video</a>
+            </div>
+        <?php endforeach; ?>
+        <?php foreach($media->youtube as $video): ?>
+        <div class="post-info">
+            <a href="<?= $video ?>" target="_blank"><i class="fa fa-youtube"></i> Watch on Youtube</a>
+        </div>
+    <?php endforeach; ?>
+    <?php foreach($media->urls as $url): ?>
+    <div class="post-info">
+        <a href="<?= $url ?>" target="_blank"><?= $url ?></a>
+    </div>
+<?php endforeach; ?>
+</div>
+
+<?php
+} ?>
+<?php if($post->text != '' && $post->text != null): ?>
+    <div class="post-info text">
+        <?= $post->text; ?>
+    </div>
+<?php endif; ?>
+<div class="post-info footer">
+
+</div>
+</div>
+<?php endforeach; ?>
+</div>

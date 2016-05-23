@@ -1,0 +1,175 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin-top: 70px;
+    font-size: 16px;
+}
+
+.add-bottom {
+    margin-bottom: 20px !important;
+}
+.add-bottom-sm {
+    margin-bottom: 10px !important;
+}
+.add-bottom-xs {
+    margin-bottom: 5px !important;
+}
+.no-bottom {
+    margin-bottom: 0px !important;
+}
+
+.add-top {
+    margin-top: 20px !important;
+}
+.add-top-sm {
+    margin-top: 10px !important;
+}
+.add-top-xs {
+    margin-top: 5px !important;
+}
+.no-top {
+    margin-top: 0px !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.justified {
+    text-align: justify !important;
+}
+.no-border {
+    border: none !important;
+    border-radius: 0px !important;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.no-margin {
+    margin: 0px !important;
+}
+.plain {
+    border: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.inline {
+    display: inline !important;
+}
+.inline-block {
+    display: inline-block !important;
+}
+.block {
+    display: block !important;
+}
+.hidden {
+    display: none !important;
+}
+
+.text-small {
+    font-size: 14px !important;
+}
+.text-large {
+    font-size: 24px !important;
+}
+.text-smaller {
+    font-size: smaller !important;
+}
+.text-larger {
+    font-size: larger !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+.relative {
+    position: relative !important;
+}
+.fixed {
+    position: fixed !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.no-float {
+    float: none !important;
+}
+.clear {
+    clear: both !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+.no-bold {
+    font-weight: normal !important;
+}
+.valign.wrap-outer {
+    display:table;
+    width:100%;
+    height:250px;
+}
+.valign .wrap-inner {
+    display:table-cell;
+    vertical-align:middle;
+}
+#header a.brand {
+    font-size: 32px;
+    padding-top: 6px;
+}
+#header.navbar a {
+    color: #9d9d9d;
+}
+#header.navbar a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#feed .post {
+    max-width: 480px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+#feed .post .post-info {
+    padding: 5px;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 5px;
+}
+#feed .post .media .col {
+    height: 250px;
+    overflow: hidden;
+    background-color: #333;
+}
+#feed .post .valign img {
+    width: 100%;
+    margin: 0px auto;
+    display: block;
+}
+
+#feeds ul {
+    border-top: 1px solid #9d9d9d;
+    margin-top: 50px;
+}
+#feeds ul.list-group, #feeds ul.list-group li.list-group-item {
+    background: none;
+    background-color: inherit;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.modal.filter-modal .label {
+    font-size: 13px;
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 4px;
+}
